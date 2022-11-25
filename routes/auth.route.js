@@ -1,9 +1,9 @@
-import express from 'express'
+import { Router } from 'express';
 import { login, register } from '../controllers/auth.controller.js'
 import { body } from 'express-validator'
 import { validationResultExpress } from '../middlewares/validationResultExpress.js';
 
-const router = express.Router();
+const router = Router();
 
 /* A middleware that validates the data that comes from the client. */
 router.post("/register", [
